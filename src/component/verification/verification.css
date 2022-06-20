@@ -1,0 +1,55 @@
+.verification_container {
+  display: flex;
+  justify-content: center;
+}
+.verification {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  width: 60vh;
+  background-color: #c8eaf4;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+.verification h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 30px auto;
+  text-transform: uppercase;
+}
+.verfy_code {
+  width: fit-content;
+  height: 50px;
+  border: 1px solid gray;
+  margin: 0px auto;
+}
+.verfy_code input {
+  width: 50px;
+  height: 100%;
+  outline: none;
+  font-size: 24px;
+  text-align: center;
+  border-left: 1px solid gray;
+  background-color: white;
+}
+.verification button {
+  width: 150px;
+  background-color: #292779;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: white;
+  border-radius: 12px;
+  padding: 4px 0px;
+  margin: 30px auto;
+}
+.confirm_message {
+  display: flex;
+  flex-direction: column;
+}
+.confirm_message span {
+  margin: 0px auto;
+  text-transform: capitalize;
+}
+.End {
+  color: #292779;
+}

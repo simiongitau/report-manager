@@ -1,0 +1,14 @@
+.veiw_section {
+  display: flex;
+  flex-direction: column;
+  background-color: #e8f5fa;
+}
+.text_area {
+  outline: none;
+}
+.veiw_section button {
+  margin-left: 70%;
+  border-radius: 13px;
+  color: white;
+  text-transform: capitalize;
+}
