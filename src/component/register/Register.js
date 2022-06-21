@@ -30,30 +30,44 @@ export default function Register() {
     // console.log("you have register");
   };
   return (
-    <form className="register" onSubmit={Register}>
-      <div className="register_container">
-        <h4>register</h4>
-        <span>name</span>
-        <input required onChange={(e) => setName(e.target.value)} />
-        <span>email</span>
+    <form
+      className="register flex justify-center items-center"
+      onSubmit={Register}
+    >
+      <div className="register_container flex flex-col bg-[#c8eaf4] w-[550px]">
+        <h4 className="mb-2 ml-10">register</h4>
+
+        <span className="text-[24px] ml-10">name</span>
+        <input
+          required
+          onChange={(e) => setName(e.target.value)}
+          className=" p-3 w-[90%]  ml-10 "
+        />
+
+        <span className="text-[24px] ml-10 ">email</span>
         <input
           required
           onChange={(e) => setEmail(e.target.value)}
           type="email"
+          className=" p-3 w-[90%]  ml-10"
         />
-        <span>password</span>
+        <span className="text-[24px] ml-10"> password</span>
         <input
           required
           type="password"
           onChange={(e) => setPassword(e.target.value)}
+          className=" p-3 w-[90%]  ml-10 "
         />
-        <span>confirm password</span>
+        <span className="text-[24px] ml-10 ">confirm password</span>
         <input
           required
           onChange={(e) => setconfirm(e.target.value)}
           type="password"
+          className=" p-3 w-[90%]  ml-10"
         />
-        <button type="submit">submit</button>
+        <button type="submit" className=" mt-8 mb-10 ml-[5%] p-3 w-[150px] ">
+          submit
+        </button>
       </div>
     </form>
   );

@@ -22,12 +22,10 @@ export default function Login() {
   console.log(backend);
   // function to handle submit
   function handleSubmit() {
-    let a = 2;
-    let b = "m";
-    if (a === password && b === email) {
+    if (backend.email === password && backend.password) {
       navigate("/register");
     } else {
-      console.log("wrong");
+      navigate("/register");
     }
   }
   console.log(password);
