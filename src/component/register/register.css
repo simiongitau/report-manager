@@ -50,7 +50,6 @@
 }
 @media (max-width: 640px) {
   .register_container {
-    background-color: #c8eaf4;
     width: 90%;
     margin: auto;
     height: 400px;
@@ -95,7 +94,6 @@
 }
 @media (max-width: 1024px) {
   .register_container {
-    background-color: #c8eaf4;
     width: 90%;
     margin: auto;
     height: 90vh;
@@ -118,7 +116,6 @@
 
 @media (max-width: 1536px) {
   .register_container {
-    background-color: #c8eaf4;
     /* width: 70%; */
     margin: auto;
     height: 90vh;
