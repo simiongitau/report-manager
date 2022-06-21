@@ -41,7 +41,7 @@ export default function Register() {
         <input
           required
           onChange={(e) => setName(e.target.value)}
-          className=" p-2.5 w-[90%]  ml-10 "
+          className=" p-2 w-[90%]  ml-10 "
         />
 
         <span className="text-[24px] ml-10 ">email</span>
@@ -49,21 +49,21 @@ export default function Register() {
           required
           onChange={(e) => setEmail(e.target.value)}
           type="email"
-          className=" p-2.5 w-[90%]  ml-10"
+          className=" p-2 w-[90%]  ml-10"
         />
         <span className="text-[24px] ml-10"> password</span>
         <input
           required
           type="password"
           onChange={(e) => setPassword(e.target.value)}
-          className=" p-2.5 w-[90%]  ml-10 "
+          className=" p-2 w-[90%]  ml-10 "
         />
         <span className="text-[24px] ml-10 ">confirm password</span>
         <input
           required
           onChange={(e) => setconfirm(e.target.value)}
           type="password"
-          className=" p-2.5 w-[90%]  ml-10"
+          className=" p-2 w-[90%]  ml-10"
         />
         <button type="submit" className=" mt-8 mb-10 ml-[5%] p-2.5 w-[150px] ">
           submit
