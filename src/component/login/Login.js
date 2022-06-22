@@ -2,34 +2,37 @@ import React from "react";
 import "./login.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { loginInitiate } from "../../redux/actions";
+
 export default function Login() {
   // setting state for email and password
   const [email, setEmail] = useState();
-  const [password, setPassord] = useState();
-  const [backend, setBackend] = useState([]);
+  const [password, setPassword] = useState();
+
   // navigate
   let navigate = useNavigate();
   // fetching data from the backnend
-  const getAllData = () => {
-    axios.get("https://tukenya/logic").then((respond) => {
-      setBackend(respond.data);
-    });
-  };
+
+  const dispatch = useDispatch();
+
+  const { currentUser } = useSelector((state) => state.user);
+
   useEffect(() => {
-    getAllData();
-  }, []);
-  console.log(backend);
-  // function to handle submit
-  function handleSubmit() {
-    if (backend.email === password && backend.password) {
-      navigate("/register");
-    } else {
-      navigate("/register");
+    if (currentUser) {
+      if (!currentUser.foundUser.verified) {
+        navigate("/verification");
+      }
     }
-  }
-  console.log(password);
-  console.log(email);
+  }, [currentUser, navigate]);
+
+  // function to handle submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    dispatch(loginInitiate(email, password));
+  };
+
   return (
     <form className="main_container">
       <div className="container">
@@ -42,9 +45,9 @@ export default function Login() {
         />
         <span>password</span>
         <input
-          onChange={(e) => setPassord(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           required
-          type="passwod"
+          type="password"
         />
         <button onClick={handleSubmit}>submit</button>
       </div>

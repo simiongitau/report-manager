@@ -2,7 +2,6 @@ import React from "react";
 import "./verification.css";
 import axios from "axios";
 import { useState } from "react";
-import { computeHeadingLevel } from "@testing-library/react";
 import { useSelector } from "react-redux";
 export default function Verification() {
   // get input
@@ -19,7 +18,7 @@ export default function Verification() {
     let combine = firtDigit + second + third + fourth + firth + six;
 
     const data = {
-      userId: currentUser._id,
+      userId: currentUser.foundUser._id,
       otp: combine,
     };
     await axios
@@ -32,6 +31,24 @@ export default function Verification() {
         console.log(res.data);
       });
     console.log("you send value");
+  };
+
+  const resendOtp = async () => {
+    const data = {
+      userId: currentUser.foundUser._id,
+    };
+    await axios
+      .post(
+        `https://ducumentmonitoringapp.herokuapp.com/api/v1/email/resend-verification-code`,
+        data
+      )
+      .then((res) => {
+        if (res.status === 200) {
+          console.log(res.data);
+        } else {
+          console.log(res.data);
+        }
+      });
   };
   return (
     <div className="verification_container">
@@ -80,7 +97,9 @@ export default function Verification() {
         <button onClick={sendCord}>verify</button>
         <div className="confirm_message">
           <span>did not receive verification code?</span>
-          <span className="End mt-2">resend again.</span>
+          <span className="End mt-2 cursor-pointer" onClick={resendOtp}>
+            resend again.
+          </span>
         </div>
       </div>
     </div>

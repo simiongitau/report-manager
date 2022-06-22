@@ -19,12 +19,12 @@ export default function Register() {
 
   useEffect(() => {
     if (currentUser) {
-      navigate("/verification");
+      navigate("/login");
     }
   }, [navigate, currentUser]);
 
   // method onsubmit
-  const Register = async (e) => {
+  const Register = (e) => {
     e.preventDefault();
     dispatch(registerInitiate(name, email, password, passwordConfirmation));
     // console.log("you have register");

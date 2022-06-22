@@ -68,7 +68,7 @@ export const registerInitiate = (
         } else if (res.status === 409) {
           dispatch(registerFail(res.data));
         } else if (res.status === 201) {
-          dispatch(registerSuccess(res.data.user));
+          dispatch(registerSuccess(res.data));
         }
       })
       .catch((error) => dispatch(registerFail(error.message)));
@@ -76,7 +76,24 @@ export const registerInitiate = (
 };
 
 export const loginInitiate = (email, password) => {
-  return async function (dispatch) {};
+  return async function (dispatch) {
+    dispatch(loginStart());
+    await axios
+      .post("https://ducumentmonitoringapp.herokuapp.com/api/v1/auth", {
+        email,
+        password,
+      })
+      .then((res) => {
+        if (res.status === 400) {
+          dispatch(loginFail(res.data));
+        } else if (res.status === 409) {
+          dispatch(loginFail(res.data));
+        } else if (res.status === 200) {
+          dispatch(loginSuccess(res.data));
+        }
+      })
+      .catch((error) => dispatch(loginFail(error.message)));
+  };
 };
 
 export const logoutInitiate = () => {
