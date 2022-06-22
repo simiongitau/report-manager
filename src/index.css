@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   .register_container {
     width: 90%;
     margin: auto;
-    height: 400px;
     padding: 2px;
   }
   .register_container h4 {
@@ -16,8 +15,6 @@
     margin-left: 20px;
   }
   .register_container input {
-    margin-left: 20px;
-    width: 90%;
     font-size: 24px;
   }
   .register_container button {
@@ -27,7 +24,7 @@
 }
 @media (max-width: 768px) {
   .register_container {
-    /* background-color: #3d0bc7f1; */
+    background-color: #3d0bc7f1;
     width: 90%;
     margin: auto;
     height: 90vh;
@@ -39,8 +36,6 @@
     margin-left: 20px;
   }
   .register_container input {
-    margin-left: 20px;
-    width: 90%;
     font-size: 24px;
   }
   .register_container button {
@@ -49,7 +44,7 @@
 }
 @media (max-width: 1024px) {
   .register_container {
-    /* width: 70%; */
+    width: 70%;
     margin: auto;
     height: 90vh;
   }
@@ -60,8 +55,6 @@
     margin-left: 20px;
   }
   .register_container input {
-    margin-left: 20px;
-    width: 90%;
     font-size: 24px;
   }
   .register_container button {
@@ -71,22 +64,17 @@
 
 @media (max-width: 1536px) {
   .register_container {
-    /* width: 70%; */
+    width: 70%;
     margin: auto;
     height: 90vh;
   }
   .register_container h4 {
     margin-left: 20px;
   }
-  .register_container span {
-    margin-left: 20px;
-  }
   .register_container input {
-    margin-left: 20px;
-    width: 90%;
     font-size: 20px;
   }
   .register_container button {
     font-size: 18px;
   }
-}
+} */
