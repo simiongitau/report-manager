@@ -34,40 +34,53 @@ export default function Register() {
       className="register flex justify-center items-center"
       onSubmit={Register}
     >
-      <div className="register_container flex flex-col bg-[#c8eaf4] w-[550px] h-fit">
-        <h4 className="mb-2 ml-10">register</h4>
+      <div className="register_container flex flex-col bg-[#c8eaf4] w-[500px] h-fit p-4">
+        <h4 className="mb-4">register</h4>
 
-        <span className="text-[24px] ml-10">name</span>
-        <input
-          required
-          onChange={(e) => setName(e.target.value)}
-          className=" p-2 w-[85%]  ml-10 "
-        />
+        <div className="flex flex-col my-2">
+          <label className="text-[20px]">name</label>
+          <input
+            required
+            onChange={(e) => setName(e.target.value)}
+            className=" p-2 w-full"
+          />
+        </div>
 
-        <span className="text-[24px] ml-10 ">email</span>
-        <input
-          required
-          onChange={(e) => setEmail(e.target.value)}
-          type="email"
-          className=" p-2 w-[85%]  ml-10"
-        />
-        <span className="text-[24px] ml-10"> password</span>
-        <input
-          required
-          type="password"
-          onChange={(e) => setPassword(e.target.value)}
-          className=" p-2 w-[85%]  ml-10 "
-        />
-        <span className="text-[24px] ml-10 ">confirm password</span>
-        <input
-          required
-          onChange={(e) => setconfirm(e.target.value)}
-          type="password"
-          className=" p-2 w-[85%]  ml-10"
-        />
-        <button type="submit" className=" mt-8 mb-10 ml-[5%] p-2.5 w-[150px] ">
-          submit
-        </button>
+        <div className="flex flex-col my-2">
+          <label className="text-[20px]">email</label>
+          <input
+            required
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            className=" p-2 w-full"
+          />
+        </div>
+
+        <div className="flex flex-col my-2">
+          <label className="text-[20px]"> password</label>
+          <input
+            required
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+            className=" p-2 w-full"
+          />
+        </div>
+
+        <div className="flex flex-col my-2">
+          <label className="text-[20px]">confirm password</label>
+          <input
+            required
+            onChange={(e) => setconfirm(e.target.value)}
+            type="password"
+            className=" p-2 w-full"
+          />
+        </div>
+
+        <div className="mt-4">
+          <button type="submit" className="p-2.5 w-full ">
+            submit
+          </button>
+        </div>
       </div>
     </form>
   );
