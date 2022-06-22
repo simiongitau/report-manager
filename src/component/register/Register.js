@@ -34,7 +34,7 @@ export default function Register() {
       className="register flex justify-center items-center"
       onSubmit={Register}
     >
-      <div className="register_container flex flex-col bg-[#c8eaf4] w-[550px]">
+      <div className="register_container flex flex-col bg-[#c8eaf4] w-[550px] h-fit">
         <h4 className="mb-2 ml-10">register</h4>
 
         <span className="text-[24px] ml-10">name</span>
