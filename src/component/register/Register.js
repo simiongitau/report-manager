@@ -77,7 +77,7 @@ export default function Register() {
         </div>
 
         <div className="mt-4">
-          <button type="submit" className="p-2.5 w-full ">
+          <button type="submit" className="p-2.5 w-[150px] ml-[150px] ">
             submit
           </button>
         </div>

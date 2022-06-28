@@ -18,6 +18,8 @@ export default function Login() {
 
   const { currentUser } = useSelector((state) => state.user);
 
+  console.log(currentUser);
+
   useEffect(() => {
     if (currentUser) {
       if (!currentUser.foundUser.verified) {

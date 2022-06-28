@@ -10,14 +10,18 @@ import Correction from "./component/collection/Correction";
 import Document from "./component/document_view/Document";
 import Client from "./component/Client_view/Client_view";
 import Admin from "./component/admin_view/Admin";
+import User from "./component/usermanage/User";
+import Adminstore from "./component/admin-store/Admin-store";
 // import Test from "./component/Test";
 function App() {
   return (
     <div>
       <Routes>
         {/* <Route path="/" element={<Test />} /> */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Register />} />
+        <Route path="/" element={<Adminstore />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/logn" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/verification" element={<Verification />} />
         <Route path="/fileupload" element={<Fileupload />} />
         <Route path="/correction" element={<Correction />} />
